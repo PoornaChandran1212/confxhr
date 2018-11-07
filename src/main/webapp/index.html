@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conference</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="conference.js"></script>
+</head>
+<style>
+    .q {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: left;
+    display: block;
+    /* background-color: cyan; */
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="well">Registration Form</h1>
+        <div class="col-lg-12 well">
+            <div class="row">
+                    <form name="index" action="/country" method="POST" onsubmit="app.insert()">    
+                        <div class="col-sm-12">
+                        <div class="row">
+                                <div class="form-group " style="padding-left: 15px;">
+                                        <label>ID</label>
+            
+                                        <input type="text" name="id" placeholder="Enter Id Here.." class="form-control">
+            
+                                    </div>
+                            <div class="col-sm-6 form-group">
+                                <label>First Name</label>
+                                <input type="text" name="firstname" placeholder="Enter First Name Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="lastname" placeholder="Enter Last Name Here.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Title</label>
+                                <input type="text" name="title" placeholder="Enter Designation Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Organization</label>
+                                <input type="text" name="organization" placeholder="Enter Organization Name Here.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label>Email Address</label>
+                                <input type="text" name="email" placeholder="Enter Email Address Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>DOB</label>
+                                <input type="date" name="dob" placeholder="Enter DOB Here.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label>Business Phone </label>
+                                <input type="text" name="phone" placeholder="Enter Business Phone Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>Fax</label>
+                                <input type="text" name="fax" placeholder="Enter Fax Here.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Address 1</label>
+                            <input type="text" name="address1" placeholder="Enter Address 1 Here.." class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Address 2</label>
+                            <input type="text" name="address2" placeholder="Enter Address 2 Here.." class="form-control">
+                        </div>
+                        
+
+
+                        <div class="row" >
+                            <div class="col-sm-4 form-group">
+                                <label>City</label>
+                                <input type="text" name="city" placeholder="Enter City Name Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>State</label>
+                                <input type="text" name="state" placeholder="Enter State Name Here.." class="form-control">
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>Zip</label>
+                                <input type="text" name="zipcode" placeholder="Enter Zip Code Here.." class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Include my contact information on lists distributed to other attendees.</label>
+                            <br>
+                            <div class="col-sm-4 form-group">
+                                <input type="radio" name="showmycontact" id="rdo1" value="Yes">Yes<br>
+                                <input type="radio" name="showmycontact" id="rdo2" value="No">No<br>
+                            </div>
+                        </div>
+                        </div>
+                             
+                        <div class="row" >
+                                <div class="form-group"  style="padding-left: 15px;">
+                                      
+                                    <div class="col-sm-4 form-group">
+                                        <label>Days Attending</label>
+                                        <div >
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Sunday">Sunday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Monday">Monday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1"value="Tuesday">Tuesday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Wednesday">Wednesday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Thrusday">Thrusday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Friday">Friday<br>
+                                            <input type="checkbox" name="daysattending" id="chk1" value="Saturday">Saturday<br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 form-group">
+                                        <label>Activities Attending</label>
+                                        <div>
+                                            <input type="checkbox" name="activityattending" id="chk2" value="CEO luncheon">CEO luncheon<br>
+                                            <input type="checkbox" name="activityattending" id="chk2" value="Finance seminar">Finance seminar<br>
+                                            <input type="checkbox" name="activityattending" id="chk2" value="Leadership seminar">Leadership seminar<br>
+                                            <input type="checkbox" name="activityattending" id="chk2"value="Marketing workshop">Marketing workshop<br>
+                                            <input type="checkbox" name="activityattending" id="chk2" value="Teamwork seminar">Teamwork seminar<br>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 form-group">
+                                        <label>Meal Preference</label>
+                                        <div>
+                                            <select id="meal" name="meals" class="drop_down">
+                                                <option></option>
+                                                <option value="Beef">Beef</option>
+                                                <option value="Chicken">Chicken</option>
+                                                <option value="Vegetarian">Vegetarian</option>
+                                                <option value="None">None</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                               <div class="form-group " style="padding-left: 15px;">
+                                <label>Special Requirements</label>
+    
+                                <input type="text" name="requirements" placeholder="Enter Special Requirements Here.." class="form-control">
+    
+                            </div>
+                        </div>
+                        <div class="form-group" style="padding-left:5px;">
+                            <label>Did you attend last years conference? </label>
+                            <br>
+                            <input type="radio" name="lastconfattend" id="rdo1" value="Yes">Yes<br>
+                            <input type="radio" name="lastconfattend" id="rdo2" value="No">No<br>
+                        </div>
+                       
+                    </div>
+                    <center>
+                    <button type="submit" class="btn btn-lg btn-info" onclick="fun()">Submit</button>
+                    <!-- <p>Click the List to Display all the countries </p>
+                        <button type="submit" onclick="app.getAllCountries()">List</button>
+                </center>  -->
+            </div>
+
+           
+
+            </form>
+        </div>
+    </div>
+    </div>
+    <!-- <p id="countries"></p>
+    <table>
+        <tr>
+           
+
+        <tbody id="countries">
+       
+        
+        </tbody>
+    </tr>
+    </table> -->
+</body>
+<script>
+
+
+        function fun() {
+     
+            var formData = new FormData(index);
+            var inputElements = document.getElementsByName('daysattending');
+            var inputElements1 = document.getElementsByName('activityattending');
+            var select = [];
+            var select1 = [];
+            var i;
+            // alert();
+            var checkedValue = null;
+            var checkedValue1 = null;
+            for (i = 0; inputElements[i]; ++i) {
+                if (inputElements[i].checked) {
+                    checkedValue = inputElements[i].value;
+                    select.push(checkedValue);
+                    // alert(select);
+                }
+            }
+            for (i = 0; inputElements1[i]; ++i) {
+                if (inputElements1[i].checked) {
+                    checkedValue1 = inputElements1[i].value;
+                    select1.push(checkedValue1);
+                }
+            }
+            var formData = new FormData(index);
+     
+     
+            result = {};
+     
+            for (var entry of formData.entries()) {
+                    if (entry[0]=="daysattending") {
+                    //    alert("hello");
+                        result[entry[0]] = select;
+     
+                    }
+                    else if (entry[0]=="activityattending") {
+                    //    alert("hello1");
+                        result[entry[0]] = select1;
+     
+                    }
+           else
+           {
+            // console.log(entry[0]);
+                result[entry[0]] =entry[1];
+           }
+            }
+            result = JSON.stringify(result)
+            console.log(result);
+     
+        }
+     
+     </script>
+
+</html>
+
+
+
